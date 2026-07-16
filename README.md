@@ -1,127 +1,60 @@
-# Alakhe App
+# Alakhe — AI Career Guidance App for South African Learners
 
-A comprehensive career guidance and business education platform designed to help students explore career paths and develop business skills.
+> Bilingual (English/isiXhosa) career guidance web app for Grade 8–10 South African learners — AI career matching, bursary finder and subject-career mapping.
 
-## Features
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![AI](https://img.shields.io/badge/AI-Claude_API-orange?style=flat)
+![isiXhosa](https://img.shields.io/badge/Language-isiXhosa%20%2F%20English-green?style=flat)
+![Education](https://img.shields.io/badge/Sector-Education-blue?style=flat)
 
-- **Career Exploration**: Browse and discover different career paths
-- **Career Requirements**: Understand prerequisites and requirements for various careers
-- **Quiz System**: Test knowledge and assess career interests
-- **Progress Tracking**: Monitor learning progress and achievements
-- **Multi-language Support**: Available in English and isiXhosa
-- **User Profiles**: Create and manage user profiles
-- **Business Education**: Learn about business fundamentals
-- **CV Builder**: Generate professional CVs
-- **Support System**: Access help and resources
+## 📋 Overview
+Alakhe ("to build" in isiXhosa) is a career guidance platform designed specifically for South African high school learners. It uses AI to match learners to careers based on their subjects and interests, provides real bursary data for SA universities, and supports isiXhosa translation throughout.
 
-## Project Structure
+## ✨ Features
+- 🤖 AI career matching via Anthropic Claude API
+- 🌍 Full isiXhosa/English bilingual support
+- 📚 8 South African career profiles with real salary data
+- 🎓 11 verified South African bursary programmes
+- 📊 Subject-to-career pathway mapping (NSC subjects)
+- 💾 Persistent learner profile and progress tracking
+- 📤 Data export/import backup system
+- 🔍 Bursary and funding finder
 
+## 🛠 Tech Stack
+| Layer | Technology |
+|---|---|
+| Frontend | HTML5, CSS3, Vanilla JavaScript |
+| AI | Anthropic Claude API |
+| Storage | localStorage (persistent profiles) |
+| Testing | Node.js test harness (38 checks) |
+
+## 📁 Project Structure
 ```
-Alakhe App/
-├── index.html          # Main HTML entry point
-├── app.js              # Main application file
-├── style.css           # Styling
-├── data/               # Data files
-│   ├── careers.js
-│   ├── career_clusters.js
-│   ├── career_requirements.js
-│   └── business.js
-├── screens/            # Screen/page components
-│   ├── home.js
-│   ├── register.js
-│   ├── profile.js
-│   ├── marks.js
-│   ├── progress.js
-│   ├── quiz.js
-│   ├── career.js
-│   ├── business.js
-│   ├── support.js
-│   ├── mission.js
-│   └── cv.js
-├── utils/              # Utility functions
-│   ├── helpers.js
-│   ├── storage.js
-│   ├── i18n.js        # Internationalization
-│   └── history.js
-└── images/            # Image assets
+├── index.html              # Landing / onboarding
+├── dashboard.html          # Learner dashboard
+├── careers.html            # Career explorer
+├── bursaries.html          # SA bursary finder
+├── profile.html            # Learner profile
+└── screens/
+    ├── dashboard.js        # Dashboard logic
+    ├── careers.js          # Career matching
+    ├── bursaries.js        # Bursary data (11 programmes)
+    └── ai-match.js         # Claude API integration
 ```
 
-## Getting Started
+## 🎓 Bursary Programmes Included
+NSFAS · Funza Lushaka (Teaching) · SETA Bursaries · Old Mutual · Standard Bank · Absa · FirstRand · Anglo American · De Beers · Government Bursaries · University Merit Awards
 
-### Prerequisites
-
-- Node.js (optional, for development server)
-- Modern web browser
-
-### Installation
-
-1. Clone or download the project
-2. Install dependencies (optional):
-   ```bash
-   npm install
-   ```
-
-### Running Locally
-
-**Option 1: Using npm**
+## 📦 Installation
 ```bash
-npm start
-# or for live reload
-npm run serve
+git clone https://github.com/SakhyN/alakhe-career-guidance-app.git
+cd alakhe-career-guidance-app
+# Open index.html — works without API key in demo mode
+# Add Claude API key for live AI matching
 ```
 
-**Option 2: Using Python** (if installed)
-```bash
-python -m http.server 8000
-```
+## 🎯 Impact
+Addresses the gap in career guidance for Eastern Cape learners who lack access to professional career counsellors.
 
-**Option 3: Direct file**
-Open `index.html` directly in your browser
-
-Then navigate to `http://localhost:8000` in your browser.
-
-## Development
-
-### Scripts
-
-- `npm start` - Start development server on port 8000
-- `npm run dev` - Same as start
-- `npm run serve` - Start with live reload
-- `npm run format` - Format code with Prettier
-
-### Code Style
-
-The project uses Prettier for code formatting. Run `npm run format` to auto-format your code.
-
-## External Dependencies
-
-The application uses the following CDN libraries:
-
-- **html2pdf.js** - PDF generation for CV
-- **Chart.js** - Data visualization for progress tracking
-
-## Features in Detail
-
-### Internationalization (i18n)
-The app supports multiple languages. Language preferences are stored in localStorage.
-
-### Local Storage
-User data including profiles, marks, and progress are persisted using browser localStorage.
-
-### Navigation
-The app uses a client-side routing system with screen-based navigation.
-
-## Browser Support
-
-- Chrome/Edge 90+
-- Firefox 88+
-- Safari 14+
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## License
-
-MIT
-
-## Contact & Support
-
-For issues or feature requests, contact the support team through the in-app support feature.
+## 📄 License
+MIT © 2026 Sakumzi Ngqobe — SakhySisa IT Solutions
